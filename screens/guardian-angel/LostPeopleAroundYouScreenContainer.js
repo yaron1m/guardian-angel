@@ -8,9 +8,9 @@ function mapStateToProps(state){
     }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
     return {
-        goToLostPerson: (userId) => console.log(userId),
+        goToLostPerson: (userId) => ownProps.navigation.navigate('LostPersonDetailsContainer', {userId}),
     };
 }
 
