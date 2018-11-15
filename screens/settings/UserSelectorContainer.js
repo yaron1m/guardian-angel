@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
-import {selectUser} from '../store/selected-user/Actions';
+import {selectUser} from '../../store/selected-user/Actions';
 import UserSelector from './UserSelector';
-import {getSelectedUser} from '../store/selected-user/Selectors';
+import {getSelectedUser} from '../../store/selected-user/Selectors';
 
 function mapStateToProps(state){
     return {
