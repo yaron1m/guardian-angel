@@ -4,7 +4,7 @@ import {getSelectedUser} from '../store/selected-user/Selectors';
 
 function mapStateToProps(state){
     return {
-        userId: getSelectedUser(state).id
+        userId: getSelectedUser(state).id,
     }
 }
 
