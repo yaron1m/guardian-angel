@@ -1,14 +1,17 @@
 import {connect} from 'react-redux';
-import LostPeolpeAroundYouScreen from './LostPeopleAroundYouScreen';
+import LostPeopleAroundYouScreen from './LostPeopleAroundYouScreen';
+import {getLostPeople} from '../../store/users/Selectors';
 
 function mapStateToProps(state){
     return {
+        lostPeople: getLostPeople(state),
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
+        goToLostPerson: (userId) => console.log(userId),
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LostPeolpeAroundYouScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(LostPeopleAroundYouScreen);
