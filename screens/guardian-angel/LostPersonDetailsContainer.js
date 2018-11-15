@@ -3,17 +3,19 @@ import {getUsers} from '../../store/users/Selectors';
 import LostPersonDetails from './LostPersonDetails';
 
 function mapStateToProps(state, ownProps){
-    const userId = ownProps.navigation.getParam("userId");
-    console.log(userId);
+    const userId = getUserId(ownProps);
     return {
         lostPerson: getUsers(state)[userId],
     }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
+    const userId = getUserId(ownProps);
     return {
-        goToLostPerson: (userId) => console.log(userId),
+        onLostPersonFound: () => console.log("Lost person found " + userId),
     };
 }
+
+const getUserId = (props) => props.navigation.getParam("userId");
 
 export default connect(mapStateToProps, mapDispatchToProps)(LostPersonDetails);
