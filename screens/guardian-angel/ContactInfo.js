@@ -15,6 +15,5 @@ export default function ContactInfo({relative}) {
 
 const styles = StyleSheet.create({
     contactInfoText: {
-        fontSize: 26
     },
 });

@@ -1,27 +1,34 @@
-import {Text, View} from 'react-native';
 import React from 'react';
-import ActionButton from '../../components/ActionButton';
+import {View, Button, StyleSheet, Text} from 'react-native';
+import Section from "../../components/Section";
 
-const styles = {
-    container: {
-        margin: 10,
-        borderColor: 'black',
-        borderWidth: 1
-    },
-    button:{}
-}
-
-export default function LostPeopleAroundYouScreen({lostPerson, goToLostPerson}) {
+export default function MissingPerson({lostPerson, goToLostPerson}) {
     return (
-        <View style={styles.container}>
-            <Text>{lostPerson.name}</Text>
-            <Text>{lostPerson.distance} KM</Text>
-            <View style={styles.button}>
-                <ActionButton
-                    title="I'm on my way"
-                    onPress={() => goToLostPerson(lostPerson.id)}
-                />
+        <Section>
+            <View style={styles.missingPersonContainer}>
+                <View style={styles.infoContainer}>
+                    <Text>
+                        <Text>{lostPerson.name},</Text> <Text>{lostPerson.goToLostPerson} miles</Text>
+                    </Text>
+                </View>
+                <View style={styles.buttonContainer}>
+                    <Button title="I'm On My Way" onPress={() => goToLostPerson(lostPerson.id)} color={"#d66a00"}/>
+                </View>
             </View>
-        </View>
+        </Section>
     );
 }
+
+const styles = StyleSheet.create({
+    missingPersonContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    infoContainer: {
+        justifyContent: "space-around"
+    },
+    buttonContainer: {
+        alignItems: 'flex-end'
+    },
+});
+

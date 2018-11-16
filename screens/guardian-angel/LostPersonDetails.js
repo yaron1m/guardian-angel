@@ -19,13 +19,11 @@ export default class LostPersonDetails extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>This is {this.props.lostPerson.name} and he is lost</Text>
-
                 <PersonalDetails lostPerson={this.props.lostPerson}/>
 
                 <ContactInfo relative={this.props.lostPerson.relative}/>
 
-                <Section title="notes">
+                <Section title="Notes">
                     <Text>{this.props.lostPerson.notes}</Text>
                 </Section>
 

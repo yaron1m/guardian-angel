@@ -4,7 +4,7 @@ import {Text, StyleSheet, View} from 'react-native';
 export default function Section(props) {
     return (
         <View style={styles.section} elevation={2}>
-            <Text style={styles.title}>{props.title}</Text>
+            {props.title === undefined || props.title === ''  ? null : <Text style={styles.title}>{props.title}</Text>}
             {props.children}
         </View>
     );
