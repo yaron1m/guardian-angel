@@ -1,4 +1,5 @@
 import * as actionTypes from './ActionTypes';
+import {sendDataToDatabase} from '../firebase/Actions';
 
 export function receiveUsers(users) {
     return {
@@ -7,3 +8,6 @@ export function receiveUsers(users) {
     };
 }
 
+export function setIsUserLost(userId, isLost) {
+    sendDataToDatabase(`/users/${userId}/isLost`, isLost);
+}
