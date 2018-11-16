@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 import Section from "./Section";
 
-export default function PersonalDetails(props) {
+export default function PersonalDetails({lostPerson}) {
     return (
         <Section title={"PersonalDetails"}>
             <View style={{flexDirection: "row"}}>
@@ -10,23 +10,23 @@ export default function PersonalDetails(props) {
                 <View style={styles.imageContainer}>
                     <Image
                         style={styles.image}
-                        source={{uri: props.imageUrl}}
+                        source={{uri: lostPerson.imageUrl}}
                     />
                 </View>
 
                 <View style={{flex: 3}}>
                     <Text>
-                        <Text>Name:</Text> <Text style={styles.text}>{props.name}</Text>
+                        <Text>Name:</Text> <Text style={styles.text}>{lostPerson.name}</Text>
                     </Text>
                     <Text>
-                        <Text>Date of birth:</Text> <Text style={styles.text}>{props.dateoOfBirth}</Text>
+                        <Text>Date of birth:</Text> <Text style={styles.text}>{lostPerson.dob}</Text>
                     </Text>
                     <Text>
-                        <Text>Weight:</Text> <Text style={styles.text}>{props.weight}</Text> <Text>Height:</Text> <Text
-                        style={styles.text}>{props.height}</Text>
+                        <Text>Weight:</Text> <Text style={styles.text}>{lostPerson.weight}</Text> <Text>Height:</Text> <Text
+                        style={styles.text}>{lostPerson.height}</Text>
                     </Text>
                     <Text>
-                        <Text>Address:</Text> <Text style={styles.text}>{props.address}</Text>
+                        <Text>Address:</Text> <Text style={styles.text}>{lostPerson.address}</Text>
                     </Text>
                 </View>
             </View>

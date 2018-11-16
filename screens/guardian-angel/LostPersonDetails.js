@@ -3,6 +3,7 @@ import React from 'react';
 import ActionButton from '../../components/ActionButton';
 import ContactInfo from './ContactInfo';
 import Section from '../../components/Section';
+import PersonalDetails from '../../components/PersonalDetails';
 
 const styles = {
     container: {
@@ -19,6 +20,8 @@ export default class LostPersonDetails extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>This is {this.props.lostPerson.name} and he is lost</Text>
+
+                <PersonalDetails lostPerson={this.props.lostPerson}/>
 
                 <ContactInfo relative={this.props.lostPerson.relative}/>
 
