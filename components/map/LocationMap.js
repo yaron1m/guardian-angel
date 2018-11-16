@@ -1,14 +1,16 @@
 import {MapView} from "expo";
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
+import { Marker } from 'react-native-maps';
 
-class GeolocationExample extends Component {
+class LocationMap extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            latitude: null,
-            longitude: null,
+            latitude: props.lat,
+            longitude: props.long,
+            points: props.points,
             error: null,
         };
     }
@@ -22,13 +24,21 @@ class GeolocationExample extends Component {
                          initialRegion={{
                              latitude: this.state.latitude,
                              longitude: this.state.longitude,
-                             latitudeDelta: 0,
-                             longitudeDelta: 0,
-                         }}/>
+                             latitudeDelta: 0.0922,
+                             longitudeDelta: 0.0421,
+                         }}>
+                    {this.state.points.map(point => (
+                        <Marker
+                            coordinate={point.lat + ',' + point.lang}
+                            title={point.name}
+                            description={""}
+                        />
+                    ))}
+                </MapView>
                 {this.state.error ? <Text>Error: {this.state.error}</Text> : null}
             </View>
         );
     }
 }
 
-export default GeolocationExample;
+export default LocationMap;

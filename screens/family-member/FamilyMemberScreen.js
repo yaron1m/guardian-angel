@@ -2,6 +2,7 @@ import {Text, View} from 'react-native';
 import React from 'react';
 import PersonalDetails from '../../components/PersonalDetails';
 import ActionButton from '../../components/ActionButton';
+import FamilyMemberMap from './FamilyMemberMap';
 
 const styles = {
     container: {
@@ -19,7 +20,7 @@ export default class FamilyMemberScreen extends React.Component {
             <View style={styles.container}>
                 <PersonalDetails lostPerson={this.props.careUser}/>
 
-                <Text>Map here </Text>
+                <FamilyMemberMap user={this.props.careUser}/>
 
                 {this.props.showIsWithMeButton && <ActionButton
                     title="David is with me"
