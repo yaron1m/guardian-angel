@@ -6,7 +6,7 @@ import UserScreenContainer from './user/UserScreenContainer';
 export default function ScreenSelector({userId, navigation}) {
 
     switch (userId) {
-        case 'user':
+        case 'lostUser':
             return <UserScreenContainer navigation={navigation}/>
 
         case 'angel':

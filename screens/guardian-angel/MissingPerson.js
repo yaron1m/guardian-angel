@@ -1,5 +1,6 @@
-import {Button, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
+import ActionButton from '../../components/ActionButton';
 
 const styles = {
     container: {
@@ -16,7 +17,7 @@ export default function LostPeopleAroundYouScreen({lostPerson, goToLostPerson}) 
             <Text>{lostPerson.name}</Text>
             <Text>{lostPerson.distance} KM</Text>
             <View style={styles.button}>
-                <Button
+                <ActionButton
                     title="I'm on my way"
                     onPress={() => goToLostPerson(lostPerson.id)}
                 />

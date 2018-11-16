@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Button, Text} from 'react-native';
+import {View, Text} from 'react-native';
+import ActionButton from '../../components/ActionButton';
 
 const styles= {
     container:{
@@ -15,7 +16,7 @@ export default function UserSelector(props) {
     return (
         <View style={styles.container}>
             <Text>Selected user: {props.userId}</Text>
-            {getButton('User', 'user', props.selectUser)}
+            {getButton('User', 'lostUser', props.selectUser)}
             {getButton('Family Member', 'familyMember', props.selectUser)}
             {getButton('Guardian Angel', 'angel', props.selectUser)}
         </View>
@@ -25,7 +26,7 @@ export default function UserSelector(props) {
 function getButton(name, type, selectUser) {
     return (
         <View style={styles.button}>
-            <Button
+            <ActionButton
                 title={name}
                 onPress={() => selectUser(type)}
             />
