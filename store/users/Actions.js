@@ -11,3 +11,7 @@ export function receiveUsers(users) {
 export function setIsUserLost(userId, isLost) {
     sendDataToDatabase(`/users/${userId}/isLost`, isLost);
 }
+
+export function updateUserLocation(userId, location) {
+    sendDataToDatabase(`/users/${userId}/location`, location);
+}
