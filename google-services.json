@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "2662210702",
+    "firebase_url": "https://guardian-angel-tlv.firebaseio.com",
+    "project_id": "guardian-angel-tlv",
+    "storage_bucket": "guardian-angel-tlv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2662210702:android:4d5084df0dccef91",
+        "android_client_info": {
+          "package_name": "com.guardian.angel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2662210702-bq88q4d0olen7pvogi38vh6jvc5c4d9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSgcMk4UEubJsYXxtWXdbHn7-UOBkJxg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
