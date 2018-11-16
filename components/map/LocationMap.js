@@ -16,7 +16,7 @@ class LocationMap extends Component {
 
         function getMarker(point) {
             return (<Marker
-                key={point.name}
+                key={point.long + point.lat}
                 title={point.name}
                 coordinate={{longitude: point.long, latitude: point.lat}}
                 pinColor={point.pinColor}
@@ -29,7 +29,7 @@ class LocationMap extends Component {
                     {getMarker(this.props.center)}
                     {this.props.points.map(point => (
                         getMarker(point)
-                        ))}
+                    ))}
                 </MapView>
                 {this.props.error && <Text>Error: {this.props.error}</Text>}
             </View>

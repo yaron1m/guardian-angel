@@ -15,9 +15,6 @@ const firebaseConfig = {
     messagingSenderId: "2662210702"
 };
 
-const development = true;
-const selectedUser = "angel"; //Choose from: user, familyMember, angel
-
 export function initFirebase() {
     return async function signInRequest(dispatch) {
 
@@ -30,9 +27,6 @@ export function fetchData(collectionName, actionCallback) {
     return function afterSignedIn(dispatch) {
         firebase.database().ref(collectionName).on('value', snapshot => {
                 dispatch(actionCallback(snapshot.val()));
-                if(development){
-                    dispatch(selectUser(selectedUser));
-                }
             },
             error => {
                 console.error('The request for ' + collectionName + ' failed: ' + error.code);
