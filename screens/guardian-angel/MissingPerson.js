@@ -22,7 +22,9 @@ export default function MissingPerson({lostPerson, goToLostPerson}) {
 const styles = StyleSheet.create({
     missingPersonContainer: {
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        marginBottom: 5,
+        marginTop: 5
     },
     infoContainer: {
         justifyContent: "space-around"
