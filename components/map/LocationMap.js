@@ -10,8 +10,8 @@ class LocationMap extends Component {
         const initialRegion = {
             latitude: this.props.center.lat,
             longitude: this.props.center.long,
-            latitudeDelta: 0.0017,
-            longitudeDelta: 0.0015,
+            latitudeDelta: this.props.latitudeDelta || 0.0017,
+            longitudeDelta: this.props.longitudeDelta || 0.0015,
         };
 
         function getMarker(point) {
@@ -25,7 +25,7 @@ class LocationMap extends Component {
 
         return (
             <View style={{flexGrow: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <MapView style={{alignSelf: 'stretch', height: 275}} region={initialRegion}>
+                <MapView style={{alignSelf: 'stretch', height: this.props.height || 275}} region={initialRegion}>
                     {getMarker(this.props.center)}
                     {this.props.points.map(point => (
                         getMarker(point)

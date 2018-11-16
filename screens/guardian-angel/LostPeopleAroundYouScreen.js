@@ -41,7 +41,11 @@ export default function LostPeopleAroundYouScreen(props) {
         const lostPersonLocations = Object.keys(props.lostPeople).map((key) => props.lostPeople[key].location);
         return (
             <View style={styles.mapContainer}>
-                <LocationMap center={props.guardianAngel.location} points={lostPersonLocations}/>
+                <LocationMap
+                    center={props.guardianAngel.location}
+                    points={lostPersonLocations}
+                    height={300}
+                />
             </View>
         );
     }
