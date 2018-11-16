@@ -8,6 +8,14 @@ import LocationMap from '../../components/map/LocationMap';
 const styles = {
     container: {
         margin: 10
+    },
+    mapContainer: {
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#fff',
+        marginLeft: 12,
+        marginRight: 12,
+        marginBottom: 15
     }
 };
 
@@ -31,6 +39,10 @@ export default function LostPeopleAroundYouScreen(props) {
 
     function getMap() {
         const lostPersonLocations = Object.keys(props.lostPeople).map((key) => props.lostPeople[key].location);
-        return (<LocationMap center={props.guardianAngel.location} points={lostPersonLocations}/>);
+        return (
+            <View style={styles.mapContainer}>
+                <LocationMap center={props.guardianAngel.location} points={lostPersonLocations}/>
+            </View>
+        );
     }
 }

@@ -14,7 +14,7 @@ const styles = {
 
 export default class LostPersonDetails extends React.Component {
     static navigationOptions = {
-        title: "Find a lost person",
+        title: "Find a Lost Person",
     };
 
     render() {
