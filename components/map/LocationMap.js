@@ -5,6 +5,7 @@ import {View, Text} from 'react-native';
 const {Marker} = MapView;
 
 class LocationMap extends Component {
+
     render() {
         const initialRegion = {
             latitude: this.props.center.lat,
@@ -24,7 +25,7 @@ class LocationMap extends Component {
 
         return (
             <View style={{flexGrow: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <MapView style={{alignSelf: 'stretch', height: 300}} initialRegion={initialRegion}>
+                <MapView style={{alignSelf: 'stretch', height: 300}} region={initialRegion}>
                     {getMarker(this.props.center)}
                     {this.props.points.map(point => (
                         getMarker(point)
