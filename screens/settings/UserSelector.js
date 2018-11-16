@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import ActionButton from '../../components/ActionButton';
+import Title from '../../components/Title';
 
 const styles= {
     container:{
@@ -8,14 +9,14 @@ const styles= {
         marginLeft: 20,
     },
     button:{
-        marginTop: 10
+        marginBottom: 10
     }
 };
 
 export default function UserSelector(props) {
     return (
         <View style={styles.container}>
-            <Text>Selected user: {props.userId}</Text>
+            <Title text={'Selected User: ' + props.userId} />
             {getButton('User', 'lostUser', props.selectUser)}
             {getButton('Family Member', 'familyMember', props.selectUser)}
             {getButton('Guardian Angel', 'angel', props.selectUser)}

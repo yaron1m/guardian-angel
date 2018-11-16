@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Button, StyleSheet, Text} from 'react-native';
 import Section from "../../components/Section";
+import Colors from '../../constants/Colors';
 
 export default function MissingPerson({lostPerson, goToLostPerson}) {
     return (
@@ -12,7 +13,7 @@ export default function MissingPerson({lostPerson, goToLostPerson}) {
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button title="I'm On My Way" onPress={() => goToLostPerson(lostPerson.id)} color={"#d66a00"}/>
+                    <Button title="I'm On My Way" onPress={() => goToLostPerson(lostPerson.id)} color={Colors.actionBottomColor}/>
                 </View>
             </View>
         </Section>

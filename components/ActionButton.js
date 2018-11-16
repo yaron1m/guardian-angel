@@ -1,10 +1,11 @@
 import React from 'react';
 import {Button, StyleSheet, View} from 'react-native';
+import Colors from "../constants/Colors";
 
 export default function ActionButton(props) {
     return (
         <View style={styles.buttonContainer}>
-            <Button title={props.title} onPress={props.onPress} color={"#d66a00"}/>
+            <Button title={props.title} onPress={props.onPress} color={Colors.actionBottomColor}/>
         </View>
     );
 }

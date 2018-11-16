@@ -6,7 +6,7 @@ import Title from "../../components/Title";
 
 const styles = {
     container: {
-        margin: 10,
+        margin: 10
     }
 };
 
