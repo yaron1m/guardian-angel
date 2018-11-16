@@ -25,7 +25,7 @@ export default class FamilyMemberScreen extends React.Component {
                 <FamilyMemberMap user={this.props.careUser}/>
 
                 {this.props.showIsWithMeButton && <ActionButton
-                    title="David is with me"
+                    title={this.props.careUser.name + " is with me"}
                     onPress={this.props.onWithMePress}
                 />}
             </View>

@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {getUserById, getUsers} from '../../store/users/Selectors';
 import LostPersonDetails from './LostPersonDetails';
 import sendPushNotification from '../../util/PushNotificationSender';
+import {setIsUserLost} from '../../store/users/Actions';
 
 function mapStateToProps(state, ownProps) {
     const userId = getUserId(ownProps);
@@ -11,7 +12,11 @@ function mapStateToProps(state, ownProps) {
     lostPerson.relative = relative;
     return {
         lostPerson: lostPerson,
-        onLostPersonFound: () => sendPushNotification(relative.expoToken, lostPerson.name + " was found!", "By one of our Guardian Angels" ),
+        onLostPersonFound: () => {
+            sendPushNotification(relative.expoToken, lostPerson.name + " was found!", "By one of our Guardian Angels" );
+            setIsUserLost(lostPerson.id, false);
+            ownProps.navigation.goBack();
+        }
     };
 }
 

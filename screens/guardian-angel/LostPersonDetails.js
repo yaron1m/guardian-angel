@@ -29,7 +29,7 @@ export default class LostPersonDetails extends React.Component {
                 </Section>
 
                 <ActionButton
-                    title="I have found him!"
+                    title={`I found ${this.props.lostPerson.name}!`}
                     onPress={this.props.onLostPersonFound}
                 />
             </View>
