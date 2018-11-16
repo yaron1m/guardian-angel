@@ -13,3 +13,9 @@ export function getLostPeople(state) {
 
     return _.filter(allUsers, x => x.type === 'user' && x.isLost);
 }
+
+export function getGuardianAngels(state) {
+    const allUsers = getUsers(state);
+
+    return _.filter(allUsers, x => x.type === 'guardianAngel');
+}
