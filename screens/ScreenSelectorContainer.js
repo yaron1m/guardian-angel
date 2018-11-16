@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
-import {getSelectedUser} from '../store/selected-user/Selectors';
+import {getSelectedUser} from '../store/selected-user-id/Selectors';
 
 function mapStateToProps(state){
     return {

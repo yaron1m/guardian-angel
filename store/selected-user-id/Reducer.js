@@ -1,15 +1,11 @@
 import * as actionTypes from './ActionTypes';
 
-const initialState = {};
+const initialState = null;
 
 export default (state = initialState, action = {}) => {
     switch (action.type) {
-        case actionTypes.SELECT_USER:
-        case actionTypes.UPDATE_SELECTED_USER:
+        case actionTypes.SELECT_USER_ID:
             return action.payload;
-
-        case actionTypes.CLEAR_SELECTED_USER:
-            return initialState;
 
         default:
             return state

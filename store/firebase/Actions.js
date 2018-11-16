@@ -4,7 +4,7 @@ import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/database'
 import {receiveUsers} from '../users/Actions';
-import {selectUser} from '../selected-user/Actions';
+import {selectUser} from '../selected-user-id/Actions';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDAy-ZUByRU8RKJzOYF8SHXP86YdDKtLqM",
