@@ -5,7 +5,7 @@ import sendPushNotification from '../../util/PushNotificationSender';
 
 function mapStateToProps(state, ownProps) {
     const userId = getUserId(ownProps);
-    const lostPerson = getUsers(state)[userId];
+    const lostPerson = getUserById(state, userId);
     const relative = getUserById(state,lostPerson.relativeUserId);
 
     lostPerson.relative = relative;

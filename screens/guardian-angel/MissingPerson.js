@@ -8,7 +8,7 @@ export default function MissingPerson({lostPerson, goToLostPerson}) {
             <View style={styles.missingPersonContainer}>
                 <View style={styles.infoContainer}>
                     <Text style={styles.infoText}>
-                        <Text>{lostPerson.name},</Text> <Text>{lostPerson.goToLostPerson} miles</Text>
+                        <Text>{lostPerson.name},</Text> <Text>{lostPerson.goToLostPerson} km</Text>
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>
