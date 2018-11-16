@@ -1,15 +1,16 @@
 import React from 'react';
 import {View, Button, StyleSheet, Text} from 'react-native';
 import Section from "../../components/Section";
+import getDistanceFromUsers from '../../util/DistanceUtil';
 import Colors from '../../constants/Colors';
 
-export default function MissingPerson({lostPerson, goToLostPerson}) {
+export default function MissingPerson({lostPerson, goToLostPerson, guardianAngel}) {
     return (
         <Section>
             <View style={styles.missingPersonContainer}>
                 <View style={styles.infoContainer}>
                     <Text style={styles.infoText}>
-                        <Text>{lostPerson.name},</Text> <Text>{lostPerson.goToLostPerson} km</Text>
+                        <Text>{lostPerson.name},</Text> <Text>{getDistanceFromUsers(guardianAngel, lostPerson)}</Text>
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>
