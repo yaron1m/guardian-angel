@@ -4,7 +4,7 @@ import Section from './Section';
 
 export default function PersonalDetails({lostPerson}) {
     return (
-        <Section title={'PersonalDetails'}>
+        <Section title={'Personal Details'}>
             <View style={{flexDirection: 'row'}}>
 
                 <View style={styles.imageContainer}>
@@ -15,18 +15,18 @@ export default function PersonalDetails({lostPerson}) {
                 </View>
 
                 <View style={{flex: 3}}>
-                    <Text>
-                        <Text>Name:</Text> <Text style={styles.text}>{lostPerson.name}</Text>
+                    <Text style={styles.infoLine}>
+                        <Text style={styles.text}>Name:</Text> <Text>{lostPerson.name}</Text>
                     </Text>
-                    <Text>
-                        <Text>Date of birth:</Text> <Text style={styles.text}>{lostPerson.dob}</Text>
+                    <Text style={styles.infoLine}>
+                        <Text style={styles.text}>Date of birth:</Text> <Text>{lostPerson.dob}</Text>
                     </Text>
-                    <Text>
-                        <Text>Weight:</Text> <Text style={styles.text}>{lostPerson.weight}   </Text>
-                        <Text>Height:</Text> <Text style={styles.text}>{lostPerson.height}</Text>
+                    <Text style={styles.infoLine}>
+                        <Text style={styles.text}>Weight:</Text> <Text>{lostPerson.weight}   </Text>
+                        <Text style={styles.text}>Height:</Text> <Text>{lostPerson.height}</Text>
                     </Text>
-                    <Text>
-                        <Text>Address:</Text> <Text style={styles.text}>{lostPerson.address}</Text>
+                    <Text style={styles.infoLine}>
+                        <Text style={styles.text}>Address:</Text> <Text>{lostPerson.address}</Text>
                     </Text>
                 </View>
             </View>
@@ -45,5 +45,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontWeight: 'bold'
+    },
+    infoLine: {
+        marginBottom: 3
     }
 });

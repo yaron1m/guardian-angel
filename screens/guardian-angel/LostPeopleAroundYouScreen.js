@@ -6,13 +6,21 @@ import _ from 'lodash';
 const styles = {
     container: {
         margin: 10,
+    },
+    title: {
+        padding: 10,
+        fontSize: 24,
+        marginBottom: 10,
+        fontWeight: 'bold',
+        textAlign: 'center'
     }
-}
+};
 
 export default function LostPeopleAroundYouScreen(props) {
     return (
         <View style={styles.container}>
-            <Text>Missing people around you</Text>
+            <Text style={styles.title}>Missing People Around You</Text>
+
             {_.map(props.lostPeople, lostPerson =>
                 <MissingPerson
                     key={lostPerson.id}
