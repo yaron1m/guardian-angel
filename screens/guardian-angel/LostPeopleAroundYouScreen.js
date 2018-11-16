@@ -20,6 +20,7 @@ export default function LostPeopleAroundYouScreen(props) {
                     key={lostPerson.id}
                     lostPerson={lostPerson}
                     goToLostPerson={props.goToLostPerson}
+                    guardianAngel={props.guardianAngel}
                 />
             )}
         </View>

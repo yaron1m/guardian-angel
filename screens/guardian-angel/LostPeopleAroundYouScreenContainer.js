@@ -1,10 +1,12 @@
 import {connect} from 'react-redux';
 import LostPeopleAroundYouScreen from './LostPeopleAroundYouScreen';
 import {getLostPeople} from '../../store/users/Selectors';
+import {getSelectedUser} from '../../store/selected-user-id/Selectors';
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return {
         lostPeople: getLostPeople(state),
+        guardianAngel: getSelectedUser(state)
     }
 }
 
