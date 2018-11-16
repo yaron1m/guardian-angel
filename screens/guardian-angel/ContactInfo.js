@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Section from "./Section";
+import Section from "../../components/Section";
 
-export default function ContactInfo(props) {
+export default function ContactInfo({relative}) {
     return (
         <Section title={"Contact Info"}>
             <Text style={styles.contactInfoText}>
-                <Text>{props.name}:</Text> <Text>{props.phoneNumber}</Text>
+                <Text>{relative.name}: </Text>
+                <Text>{relative.phone}</Text>
             </Text>
         </Section>
     );
