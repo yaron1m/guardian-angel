@@ -16,7 +16,7 @@ const firebaseConfig = {
 };
 
 const development = true;
-const selectedUser = "angel"; //Choose from: user, familyMember, angel
+const selectedUser = "familyMember"; //Choose from: user, familyMember, angel
 
 export function initFirebase() {
     return async function signInRequest(dispatch) {

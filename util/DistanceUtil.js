@@ -1,5 +1,5 @@
 //This function takes in latitude and longitude of two location and returns the distance between them as the crow flies (in km)
-function calcDistance(lat1, lon1, lat2, lon2) {
+export function calcDistance(lat1, lon1, lat2, lon2) {
     const R = 6371; // km
     const dLat = toRad(lat2 - lat1);
     const dLon = toRad(lon2 - lon1);
