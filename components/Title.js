@@ -9,7 +9,7 @@ export default function Title(props) {
 
 const styles = {
     title: {
-        padding: 10,
+        padding: 5,
         fontSize: 24,
         marginBottom: 10,
         fontWeight: 'bold',

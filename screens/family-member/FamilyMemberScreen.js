@@ -3,6 +3,7 @@ import React from 'react';
 import PersonalDetails from '../../components/PersonalDetails';
 import ActionButton from '../../components/ActionButton';
 import UsersMap from '../../components/UsersMap';
+import Title from '../../components/Title';
 
 const styles = {
     container: {
@@ -27,6 +28,8 @@ export default class FamilyMemberScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <Title text={"Guard Your Relative"}/>
+
                 <PersonalDetails lostPerson={this.props.careUser}/>
 
                 <UsersMap user={this.props.careUser}/>

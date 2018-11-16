@@ -25,7 +25,7 @@ class LocationMap extends Component {
 
         return (
             <View style={{flexGrow: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <MapView style={{alignSelf: 'stretch', height: 300}} region={initialRegion}>
+                <MapView style={{alignSelf: 'stretch', height: 275}} region={initialRegion}>
                     {getMarker(this.props.center)}
                     {this.props.points.map(point => (
                         getMarker(point)
