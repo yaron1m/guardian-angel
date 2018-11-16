@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text} from 'react-native';
-import {updateUserLocation} from '../store/users/Actions';
+import {setIsUserLost, updateUserLocation} from '../store/users/Actions';
 import ActionButton from '../components/ActionButton';
 
 export default class LinksScreen extends React.Component {
@@ -40,6 +40,7 @@ export default class LinksScreen extends React.Component {
 
         return (
             <ScrollView style={styles.container}>
+                <ActionButton title="Not lost" onPress={() => setIsUserLost("lostUser", false)}/>
                 <ActionButton title="near home" onPress={onPress(1)}/>
                 <ActionButton title="near work" onPress={onPress(2)}/>
                 <ActionButton title="lost" onPress={onPress(3)}/>
