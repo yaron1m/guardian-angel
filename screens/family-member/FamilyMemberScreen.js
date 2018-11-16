@@ -1,9 +1,8 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import PersonalDetails from '../../components/PersonalDetails';
 import ActionButton from '../../components/ActionButton';
-import FamilyMemberMap from './FamilyMemberMap';
-import Title from '../../components/Title';
+import UsersMap from '../../components/UsersMap';
 
 const styles = {
     container: {
@@ -30,9 +29,7 @@ export default class FamilyMemberScreen extends React.Component {
             <View style={styles.container}>
                 <PersonalDetails lostPerson={this.props.careUser}/>
 
-                <View style={styles.mapContainer}>
-                    <FamilyMemberMap user={this.props.careUser}/>
-                </View>
+                <UsersMap user={this.props.careUser}/>
 
                 {this.props.showIsWithMeButton && <ActionButton
                     title={this.props.careUser.name + " is with me"}

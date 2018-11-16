@@ -3,12 +3,12 @@ import {Platform} from 'react-native';
 import {createBottomTabNavigator, createStackNavigator} from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import LinksScreen from '../screens/LinksScreen';
+import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/settings/SettingsScreen';
 import {HomeStack} from '../screens/HomeScreenStack';
 
 const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+  Links: AboutScreen,
 });
 
 LinksStack.navigationOptions = {
