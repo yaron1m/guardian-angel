@@ -1,24 +1,20 @@
 import {connect} from 'react-redux';
-import {getUsers} from '../../store/users/Selectors';
+import {getUserById, getUsers} from '../../store/users/Selectors';
 import LostPersonDetails from './LostPersonDetails';
+import sendPushNotification from '../../util/PushNotificationSender';
 
 function mapStateToProps(state, ownProps) {
     const userId = getUserId(ownProps);
-    const user = getUsers(state)[userId];
+    const lostPerson = getUsers(state)[userId];
+    const relative = getUserById(state,lostPerson.relativeUserId);
 
-    user.relative = getUsers(state)[user.relativeUserId];
+    lostPerson.relative = relative;
     return {
-        lostPerson: user,
-    };
-}
-
-function mapDispatchToProps(dispatch, ownProps) {
-    const userId = getUserId(ownProps);
-    return {
-        onLostPersonFound: () => console.log('Lost person found ' + userId),
+        lostPerson: lostPerson,
+        onLostPersonFound: () => sendPushNotification(relative.expoToken, lostPerson.name + " was found!", "By one of our Guardian Angels" ),
     };
 }
 
 const getUserId = (props) => props.navigation.getParam('userId');
 
-export default connect(mapStateToProps, mapDispatchToProps)(LostPersonDetails);
+export default connect(mapStateToProps)(LostPersonDetails);
