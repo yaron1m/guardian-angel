@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Button, StyleSheet, Text} from 'react-native';
+import {View, Button, StyleSheet, Text, Image} from 'react-native';
 import Section from "../../components/Section";
 import getDistanceFromUsers from '../../util/DistanceUtil';
 import Colors from '../../constants/Colors';
@@ -9,9 +9,11 @@ export default function MissingPerson({lostPerson, goToLostPerson, guardianAngel
         <Section>
             <View style={styles.missingPersonContainer}>
                 <View style={styles.infoContainer}>
-                    <Text style={styles.infoText}>
-                        <Text>{lostPerson.name},</Text> <Text>{getDistanceFromUsers(guardianAngel, lostPerson)}</Text>
-                    </Text>
+                    <Text style={styles.infoText}>{lostPerson.name}</Text>
+                    <View style={{flexDirection: "row"}}>
+                        <Image style={styles.barScalePicture} source={require('../../assets/images/bar_scale_picture.png')} />
+                        <Text>{getDistanceFromUsers(guardianAngel, lostPerson)} Away</Text>
+                    </View>
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button title="I'm On My Way" onPress={() => goToLostPerson(lostPerson.id)} color={Colors.actionBottomColor}/>
@@ -32,9 +34,16 @@ const styles = StyleSheet.create({
         justifyContent: "space-around"
     },
     infoText: {
-        fontSize: 18,
+        paddingBottom: 2,
+        fontSize: 18
+    },
+    barScalePicture: {
+        width: 15,
+        marginRight: 5,
+        height: 17
     },
     buttonContainer: {
+        justifyContent: "space-around",
         alignItems: 'flex-end'
     },
 });
