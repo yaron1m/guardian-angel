@@ -12,7 +12,7 @@ export default function MissingPerson({lostPerson, goToLostPerson, guardianAngel
                     <Text style={styles.infoText}>{lostPerson.name}</Text>
                     <View style={{flexDirection: "row"}}>
                         <Image style={styles.barScalePicture} source={require('../../assets/images/bar_scale_picture.png')} />
-                        <Text>{getDistanceFromUsers(guardianAngel, lostPerson)} Away</Text>
+                        <Text>{getDistanceFromUsers(guardianAngel, lostPerson)} away</Text>
                     </View>
                 </View>
                 <View style={styles.buttonContainer}>
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         height: 17
     },
     buttonContainer: {
+        marginRight: 3,
         justifyContent: "space-around",
         alignItems: 'flex-end'
     },
