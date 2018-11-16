@@ -8,9 +8,17 @@ import Title from '../../components/Title';
 const styles = {
     container: {
         margin: 10,
-        marginTop: 20
+        marginTop: 15
+    },
+    mapContainer: {
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#fff',
+        marginLeft: 12,
+        marginRight: 12,
+        marginBottom: 15
     }
-}
+};
 
 export default class FamilyMemberScreen extends React.Component {
     static navigationOptions = {
@@ -22,7 +30,9 @@ export default class FamilyMemberScreen extends React.Component {
             <View style={styles.container}>
                 <PersonalDetails lostPerson={this.props.careUser}/>
 
-                <FamilyMemberMap user={this.props.careUser}/>
+                <View style={styles.mapContainer}>
+                    <FamilyMemberMap user={this.props.careUser}/>
+                </View>
 
                 {this.props.showIsWithMeButton && <ActionButton
                     title={this.props.careUser.name + " is with me"}
