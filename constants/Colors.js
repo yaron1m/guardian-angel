@@ -1,4 +1,4 @@
-const tintColor = '#1aa2d9';
+const tintColor = '#2f95dc';
 
 export default {
   tintColor,
@@ -11,5 +11,5 @@ export default {
   warningText: '#666804',
   noticeBackground: tintColor,
   noticeText: '#fff',
-  actionBottomColor: '#095470'
+  actionBottomColor: '#695883'
 };

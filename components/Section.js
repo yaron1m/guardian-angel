@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#fff',
-        backgroundColor: '#fff',
+        backgroundColor: '#ffffff',
         shadowColor: '#000000',
         shadowOffset: {
             width: 0,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.8
     },
     title: {
-        color: '#decda2',
+        color: '#958d93',
         fontSize: 16,
         paddingBottom: 5
     },

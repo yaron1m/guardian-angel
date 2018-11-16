@@ -37,11 +37,13 @@ export default function PersonalDetails({lostPerson}) {
 const styles = StyleSheet.create({
     imageContainer: {
         flex: 1,
-        marginTop: 5
+        justifyContent: 'space-around'
     },
     image: {
-        width: 70,
-        height: 70
+        width: 75,
+        height: 80,
+        borderWidth: 0.5,
+        borderColor: '#565656',
     },
     text: {
         fontWeight: 'bold'
