@@ -10,7 +10,7 @@ export default class LinksScreen extends React.Component {
 
     changeLostPersonLocation(option) {
         const location = {
-            name: 'Bill',
+            name: 'Dror',
             pinColor: '#61a6fb'
         };
         switch (option) {
