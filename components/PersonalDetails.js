@@ -1,11 +1,11 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
-import Section from "./Section";
+import Section from './Section';
 
 export default function PersonalDetails({lostPerson}) {
     return (
-        <Section title={"PersonalDetails"}>
-            <View style={{flexDirection: "row"}}>
+        <Section title={'PersonalDetails'}>
+            <View style={{flexDirection: 'row'}}>
 
                 <View style={styles.imageContainer}>
                     <Image
@@ -22,8 +22,8 @@ export default function PersonalDetails({lostPerson}) {
                         <Text>Date of birth:</Text> <Text style={styles.text}>{lostPerson.dob}</Text>
                     </Text>
                     <Text>
-                        <Text>Weight:</Text> <Text style={styles.text}>{lostPerson.weight}</Text> <Text>Height:</Text> <Text
-                        style={styles.text}>{lostPerson.height}</Text>
+                        <Text>Weight:</Text> <Text style={styles.text}>{lostPerson.weight}   </Text>
+                        <Text>Height:</Text> <Text style={styles.text}>{lostPerson.height}</Text>
                     </Text>
                     <Text>
                         <Text>Address:</Text> <Text style={styles.text}>{lostPerson.address}</Text>
@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
         height: 70
     },
     text: {
-        fontWeight: "bold"
+        fontWeight: 'bold'
     }
 });
