@@ -7,7 +7,7 @@ export default function MissingPerson({lostPerson, goToLostPerson}) {
         <Section>
             <View style={styles.missingPersonContainer}>
                 <View style={styles.infoContainer}>
-                    <Text>
+                    <Text style={styles.infoText}>
                         <Text>{lostPerson.name},</Text> <Text>{lostPerson.goToLostPerson} miles</Text>
                     </Text>
                 </View>
@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     },
     infoContainer: {
         justifyContent: "space-around"
+    },
+    infoText: {
+        fontSize: 18,
     },
     buttonContainer: {
         alignItems: 'flex-end'
