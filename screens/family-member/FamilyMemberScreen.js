@@ -28,7 +28,7 @@ export default class FamilyMemberScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Title text={"Protect Your Relative"}/>
+                <Title text="Bird's Eye View"/>
 
                 <PersonalDetails lostPerson={this.props.careUser}/>
 
