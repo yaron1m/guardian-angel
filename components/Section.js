@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#fff',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#fff',
         shadowColor: '#000000',
         shadowOffset: {
             width: 0,
