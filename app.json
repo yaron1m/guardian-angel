@@ -5,7 +5,10 @@
     "slug": "guardian-angel",
     "privacy": "public",
     "sdkVersion": "31.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -21,7 +24,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier" : "com.guardian.angel"
+    },
+    "android": {
+      "package": "com.guardian.angel",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBdMuw1raePCJd_bYHxhK5Xbn_uL_XBHT4"
+        }
+      }
     }
   }
 }
