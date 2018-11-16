@@ -8,6 +8,7 @@ import PersonalDetails from '../../components/PersonalDetails';
 const styles = {
     container: {
         margin: 10,
+        marginTop: 20
     }
 }
 

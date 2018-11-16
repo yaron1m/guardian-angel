@@ -3,10 +3,12 @@ import React from 'react';
 import PersonalDetails from '../../components/PersonalDetails';
 import ActionButton from '../../components/ActionButton';
 import FamilyMemberMap from './FamilyMemberMap';
+import Title from '../../components/Title';
 
 const styles = {
     container: {
         margin: 10,
+        marginTop: 20
     }
 }
 
