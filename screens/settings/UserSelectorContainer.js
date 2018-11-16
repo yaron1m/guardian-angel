@@ -9,9 +9,12 @@ function mapStateToProps(state){
     }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
     return {
-        selectUser: (userId) => dispatch(selectUser(userId)),
+        selectUser: (userId) => {
+            dispatch(selectUser(userId));
+            ownProps.navigation.navigate("Home");
+        }
     };
 }
 

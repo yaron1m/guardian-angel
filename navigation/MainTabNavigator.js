@@ -39,4 +39,6 @@ export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+},{
+    initialRouteName: "SettingsStack"
 });

@@ -3,15 +3,15 @@ import LostPeopleAroundYouScreenContainer from './guardian-angel/LostPeopleAroun
 import FamilyMemberScreenContainer from './family-member/FamilyMemberScreenContainer';
 
 export default function ScreenSelector({userId, navigation}) {
-
     switch (userId) {
-        case 'angel':
-            return <LostPeopleAroundYouScreenContainer navigation={navigation}/>;
-
         case 'familyMember':
             return <FamilyMemberScreenContainer navigation={navigation}/>;
+
+        case 'angel':
+            return <LostPeopleAroundYouScreenContainer navigation={navigation}/>;
 
         default:
             return null;
     }
+
 }
