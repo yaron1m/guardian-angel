@@ -15,18 +15,18 @@ export default class LinksScreen extends React.Component {
         };
         switch (option) {
             case 1:
-                location.lat = 37.484559;
-                location.long = -122.148839;
+                location.lat = 37.483278;
+                location.long = -122.150197;
                 break;
 
             case 2:
-                location.lat = 37.485224;
-                location.long = -122.147996;
+                location.lat = 37.483842;
+                location.long = -122.149607;
                 break;
 
             case 3:
-                location.lat = 37.485745;
-                location.long = -122.146897;
+                location.lat = 37.485578;
+                location.long = -122.147426;
                 break;
         }
 
@@ -36,11 +36,11 @@ export default class LinksScreen extends React.Component {
     }
 
     render() {
-        const onPress= (option) => () => this.changeLostPersonLocation.bind(this)(option);
+        const onPress = (option) => () => this.changeLostPersonLocation.bind(this)(option);
 
         return (
             <ScrollView style={styles.container}>
-                <ActionButton title="Not lost" onPress={() => setIsUserLost("lostUser", false)}/>
+                <ActionButton title="Not lost" onPress={() => setIsUserLost('lostUser', false)}/>
                 <ActionButton title="near home" onPress={onPress(1)}/>
                 <ActionButton title="near work" onPress={onPress(2)}/>
                 <ActionButton title="lost" onPress={onPress(3)}/>
