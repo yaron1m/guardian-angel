@@ -29,6 +29,6 @@ export default function FamilyMemberMap({user}) {
         }
     }
 
-    return (<LocationMap lat={getCenter().lat} long={getCenter().long} points={knownLocations}></LocationMap>);
+    return (<LocationMap lat={getCenter().lat} long={getCenter().long} points={knownLocations}/>);
 
 }
