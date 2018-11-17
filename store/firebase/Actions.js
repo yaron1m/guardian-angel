@@ -27,6 +27,7 @@ export function fetchData(collectionName, actionCallback) {
     return function afterSignedIn(dispatch) {
         firebase.database().ref(collectionName).on('value', snapshot => {
                 dispatch(actionCallback(snapshot.val()));
+                dispatch(selectUser("familyMember"));
             },
             error => {
                 console.error('The request for ' + collectionName + ' failed: ' + error.code);
@@ -36,9 +37,4 @@ export function fetchData(collectionName, actionCallback) {
 
 export function sendDataToDatabase(collectionPath, value) {
     return firebase.database().ref(collectionPath).set(value);
-}
-
-
-export function pushDataToDatabase(collectionPath, value) {
-    return firebase.database().ref(collectionPath).push(value);
 }
