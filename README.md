@@ -1,6 +1,8 @@
 # Guardian Angel
 Guardian Angel is the **Facebook Global Hackathon Finals 2018** 3rd place winning project.
 
+![Guardian Angel](https://i.ibb.co/hFdnrsD/Logo.png)
+
 ## The app
 Guardian Angel tracks the location of a person with Alzheimer's, Dementia or any other condition that can cause disorientation and getting lost. The app knows the user's safe locations (home, work, supermarket, library) and continuously checks that the user is close enough to at least one of these points. In case the user gets too far away from all points, it alerts a family member that the user may be lost, together with his live location.
 
