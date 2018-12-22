@@ -17,7 +17,6 @@ export default function UserSelector(props) {
     return (
         <View style={styles.container}>
             <Title text={'Selected User: ' + props.userId} />
-            {getButton('User', 'lostUser', props.selectUser)}
             {getButton('Family Member', 'familyMember', props.selectUser)}
             {getButton('Guardian Angel', 'angel', props.selectUser)}
         </View>
